@@ -1,1 +1,23 @@
+import java.util.Scanner;
 
+public class decimalToBinary {
+    public static void main(String[] args) 
+    {
+        Scanner input = new Scanner(System.in);
+        int num, temp, remainder;
+        String binary = "";
+
+        System.out.print("Enter an integer: ");
+        num = input.nextInt();
+        temp = num;
+
+        while (temp > 0) {
+            remainder = temp % 2;
+            binary = remainder + binary;
+            temp = temp / 2;
+        }
+
+        System.out.println("Binary of " + num + " is: " + binary);
+        input.close();
+    }
+}
